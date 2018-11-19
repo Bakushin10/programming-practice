@@ -12,14 +12,14 @@ class Solution:
                 return False
         return True
 
-    def zip(self):
-        numbersList = [1, 2, 3]
-        strList = ['one', 'two', "three"]
-
-        result = zip(numbersList, strList)
-        print(result)
-        print(result[0])
-        print(result[0][0])
+    # def zip(self):
+    #     numbersList = [1, 2, 3]
+    #     strList = ['one', 'two', "three"]
+    #
+    #     result = zip(numbersList, strList)
+    #     print(result)
+    #     print(result[0])
+    #     print(result[0][0])
 
 s = Solution()
 s.zip()
