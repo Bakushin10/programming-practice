@@ -19,17 +19,17 @@ class Solution:
                     pop = operator.pop()
                     output.append(pop)
                 operator.pop()
-            elif i not in self.signs: # numbers
+            elif i in self.signs: # signs
                 if len(operator) == 0:
-                    output.append(i)
-                elif operator[-1] in self.mathSigns:
+                    operator.append(i)
+                elif operator[-1] in self.mathSigns and i in self.mathSigns:
                     pop = operator.pop()
                     output.append(pop)
                     operator.append(i)
                 else:
-                    output.append(i)
-            else:
-                operator.append(i)
+                    operator.append(i)
+            else: # numbers
+                output.append(i)
         
         if operator:
             while len(operator) != 0:
