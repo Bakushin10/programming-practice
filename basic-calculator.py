@@ -1,4 +1,7 @@
 class Solution:
+    
+    #https://leetcode.com/problems/basic-calculator/
+
     signs = ['-', '+', '(']
     mathSigns = ['-', '+']
     allSigns = ['-', '+', '(',')']
@@ -10,7 +13,7 @@ class Solution:
         # take care of the edge cases (1) 0 
 
         s = s.replace(" ","")
-        self.buildArr(s)
+        s = self.buildArr(s)
         stack = self.getPostfix(s)
         result = self.postFix(stack)
         print(result)
@@ -45,7 +48,7 @@ class Solution:
         if num != "":
             stack.append(num)
 
-        print(stack)
+        return stack
         
     def calc(self, top, buttom, operator):
         val = 0
@@ -58,23 +61,23 @@ class Solution:
     def getPostfix(self, s):
         output = []
         operator = []
-        for i in s:
-            if i == ')':
+        for i in range(len(s)):
+            if s[i] == ')':
                 while operator[-1] != '(':
                     pop = operator.pop()
                     output.append(pop)
                 operator.pop()
-            elif i in self.signs: # signs
+            elif s[i] in self.signs: # signs
                 if len(operator) == 0:
-                    operator.append(i)
-                elif operator[-1] in self.mathSigns and i in self.mathSigns:
+                    operator.append(s[i])
+                elif operator[-1] in self.mathSigns and s[i] in self.mathSigns:
                     pop = operator.pop()
                     output.append(pop)
-                    operator.append(i)
+                    operator.append(s[i])
                 else:
-                    operator.append(i)
+                    operator.append(s[i])
             else: # numbers
-                output.append(i)
+                output.append(s[i])
         
         if operator:
             while len(operator) != 0:
@@ -90,5 +93,5 @@ class Solution:
         
 
 s = Solution()
-equation = "2147483647+10+(5+4)" # 3.5
+equation = "(1+(4+5+2)-3)+(6+8)" # 3.5
 s.calculate(equation)
