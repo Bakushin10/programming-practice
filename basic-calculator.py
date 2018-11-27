@@ -1,6 +1,8 @@
 class Solution:
     
     #https://leetcode.com/problems/basic-calculator/
+    #shunting yard algorithm
+    #postfix calculation
 
     signs = ['-', '+', '(']
     mathSigns = ['-', '+']
