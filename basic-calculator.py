@@ -9,11 +9,11 @@ class Solution:
     allSigns = ['-', '+', '(',')']
     def calculate(self, s):
         """
-        :type s: str
+        :type s: strfrom treelib import Node, Tree
         :rtype: int
         """
         # take care of the edge cases (1) 0 
-
+        
         s = s.replace(" ","")
         s = self.buildArr(s)
         stack = self.getPostfix(s)
