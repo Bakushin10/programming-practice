@@ -12,12 +12,12 @@ import openpyxl
 
 """
 takes 3 arguments
-1. jumpserver log 
-2. targeted server log
+1. jumpserver log folder
+2. targeted server log folder
 3. potential user list 
 
 ex)
-py PredictOper_2.py "C:\TEMP\Splunk_log\長井さん\fdev\jumpServerLog" "C:\TEMP\Splunk_log\長井さん\fdev\ETL01_log" "C:\TEMP\Splunk_log\長井さん\oper.xlsx"
+py PredictOper_2.py "path\to\jumpServerLog" "path\to\serferfolder" "userlist.xlsx"
 
 """
 
