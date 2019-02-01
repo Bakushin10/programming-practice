@@ -10,7 +10,7 @@ import collections
 class Solution:
     def checkInclusion(self, s1, s2):
 
-        l = len(s1)  # window length
+        l = len(s1)  # window length    
         perm1 = collections.Counter(s1)
         d = collections.Counter(s2[0: l])
         
