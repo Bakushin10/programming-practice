@@ -19,3 +19,5 @@ k = 8
 
 d = Solution()
 d.kthSmallest(matrix, k)
+
+TTTechiesAreAwesome!
