@@ -52,22 +52,32 @@ def magicNumber(n):
     else:
         return res
 
-def dijsktra(graph):
+def dijsktra(graph, INF):
 
-    visited = []
-    currentDistance = 0
-    for nodes, vertex in graph.items():
-        print(str(nodes))
-        visited.append(nodes)
-        for node, distance in vertex.items():
+    """
+        at the beginning, only append the first node with distance of 0.
+        If the node does not exist, then append it with the distance of INF.
+        For this code, I provided all the nodes with distance for simplicities
+    """
+    visited =[]
+    q = Queue()
+    q.put("A")
+    dict = {"A":0,"B":INF,"C":INF,"D":INF,"E":INF,"F":INF,"G":INF}
+    while not q.empty():
+        currntNode = q.get()
+        visited.append(currntNode)
+        for node, distanceToNextNode in graph[currntNode].items():
             if node not in visited:
-                newDistance = currentDistance + distance
-            print(str(node) + " " + str(distance))
+                q.put(node) # append Queue
+                distanceToCurrentNode = dict.get(currntNode)
+                maxDis = dict.get(node) # Max distance to currentNode
+                newDistance = distanceToCurrentNode + distanceToNextNode
+                if newDistance < maxDis:
+                    dict[node] = newDistance
+        print(dict)
 
-
-
-
-
+import math
+from Queue import Queue
 if __name__ == "__main__":
     arr = [5, 2, 3, 1, 4, 6, 0]
     distances = {
@@ -82,4 +92,5 @@ if __name__ == "__main__":
     #duplicate(arr)
     #findSumCombination(arr, 5)
     #print(magicNumber(7))
-    dijsktra(distances)
+    INF = float("inf")
+    dijsktra(distances, INF)
