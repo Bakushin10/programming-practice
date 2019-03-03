@@ -1,3 +1,6 @@
+"""
+    random problems for the interview
+"""
 def duplicate(arr):
     """
         [1, 2, 3, 1, 4, 5, 2]
@@ -28,10 +31,9 @@ def findSumCombination(arr, target):
 
 def minDepth(root):
     
-    if root == NULL:
-        return
-    
-    if root.right is NULL and root.left is NULL:
+    if root == None:
+        return 1
+    if root.right is None and root.left is None:
         return 1
 
     if root.right:
