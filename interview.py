@@ -42,6 +42,13 @@ def minDepth(root):
         minDepth(root.left) + 1
     return root + 1
 
+def rangeFunc():
+    """
+        range(start, stop, step)
+    """
+    for i in range(1, 10, 1):
+        print(i)
+
 def magicNumber(n):
 
     res = 1
@@ -96,3 +103,14 @@ if __name__ == "__main__":
     #print(magicNumber(7))
     INF = float("inf")
     dijsktra(distances, INF)
+    rangeFunc()
+
+    nlogn
+    logn
+    n
+
+    logn
+    nlogn
+    n
+
+    
