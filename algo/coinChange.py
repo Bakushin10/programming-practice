@@ -19,7 +19,32 @@ def numberOfWaysToMakeChange(n, denoms):
         print(i)
     return arr[-1][-1] if arr[-1][-1] != 0 else -1
 
+def smallestDifference(arrayOne, arrayTwo):
+    # Write your code here.
+    arrayOne = sorted(arrayOne)
+    arrayTwo = sorted(arrayTwo)
+    n,m = 0, 0
+    minVal = float("inf")
+    ans = []
+    while n < len(arrayOne) and m < len(arrayTwo):
+        diff = abs(arrayOne[n] - arrayTwo[m])
+        if diff < minVal:
+            minVal = diff
+            ans = [arrayOne[n], arrayTwo[m]]
+        if arrayOne[n] == arrayTwo[m]:
+            return ans
+        elif arrayOne[n] < arrayTwo[m]:
+            n += 1
+        else:
+            m += 1
+    print(minVal)
+    print(ans)
+    return ans
+    
 
 n = 3
 denoms = [2,1]
-print(numberOfWaysToMakeChange(n, denoms))
+a1 = [-1,5,10,20,28,3]
+a2 = [26, 134, 135, 15, 17]
+#print(numberOfWaysToMakeChange(n, denoms))
+smallestDifference(a1, a2)
