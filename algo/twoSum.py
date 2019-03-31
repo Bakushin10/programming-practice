@@ -1,3 +1,7 @@
+"""
+https://www.algoexpert.io/questions/Two%20Number%20Sum
+"""
+
 def twoNumberSum(array, targetSum):
     # Write your code here.
     from collections import defaultdict

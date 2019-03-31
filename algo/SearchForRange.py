@@ -1,3 +1,6 @@
+"""
+https://www.algoexpert.io/questions/Search%20For%20Range
+"""
 def searchForRange(array, target):
     # Write your code here.
     right = searchForRangeHelper(array, target, 0, len(array), True)
@@ -21,11 +24,11 @@ def searchForRangeHelper(array, target, right, left, goLeft):
             else:
                 searchForRangeHelper(array, target, right, middle-1, goLeft)
         else:
-            if middle == len(array) - 1 or array[mid + 1] != target:
+            if middle == len(array) - 1 or array[middle + 1] != target:
                 print(array[middle-1])
                 return middle
             else:
-                searchForRangeHelper(array, target, mid+1, middle, goLeft)
+                searchForRangeHelper(array, target, middle+1, middle, goLeft)
 
     
 

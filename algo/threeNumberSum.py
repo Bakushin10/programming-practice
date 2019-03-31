@@ -1,3 +1,6 @@
+"""
+https://www.algoexpert.io/questions/Three%20Number%20Sum
+"""
 def threeNumberSum(array, targetSum):
     # Write your code here.
      ans = []

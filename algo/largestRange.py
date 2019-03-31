@@ -27,7 +27,6 @@ def largestRange(array):
             distance = curr - start
             if distance >= longestDistance:
                 longestDistance = distance
-
                 # case when last element is the longest distance
                 if i == len(array) - 1 and diff == 1:
                     res = [array[start], array[curr]]
@@ -38,7 +37,12 @@ def largestRange(array):
     print(res)
     return res
 
-
+def fibo(r,l,num,target):
+    if target == num:
+        return r + l
+    else:
+        return fibo(l, r+l, num+1, target)
 
 st = [8,4,2,10,3,6,7,9,1]
-largestRange(st)
+#largestRange(st)
+print(fibo(0,1,3,50))

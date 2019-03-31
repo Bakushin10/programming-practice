@@ -1,3 +1,6 @@
+"""
+https://www.algoexpert.io/questions/Min%20Number%20Of%20Coins%20For%20Change
+"""
 def numberOfWaysToMakeChange(n, denoms):
     # Write your code here.
     arr = [[0 for i in range(n + 1)] for i in range(len(denoms))]
