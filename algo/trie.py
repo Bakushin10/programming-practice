@@ -99,3 +99,16 @@ class SuffixTrie:
 				return False
 			node = node[letter]
 		return self.endSymbol in node
+
+
+        str1 = "abacbcsss"
+        count = {}
+
+        for i in string:
+            count[i] += 1
+        for i in string:
+            if count[i] == 1:
+                return i 
+        return ""
+
+
