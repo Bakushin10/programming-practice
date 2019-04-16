@@ -16,3 +16,4 @@ def longestSubstringWithoutDuplication(string):
 
 st = "abc"
 print(longestSubstringWithoutDuplication(st))
+print(st[::])
