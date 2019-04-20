@@ -1,5 +1,4 @@
 from collections import defaultdict
-import re
 
 class Solution(object):
     def findDuplicate(self, paths):
@@ -29,9 +28,6 @@ class Solution(object):
         # it is always len(content - 2) because of () 
         fileName = s[:-(len(content)+2)]
         return fileName, content
-
-            
-        
 
 
 paths = ["root/a 1.txt(abcd) 2.txt(efgh)", "root/c 3.txt(abcd)", "root/c/d 4.txt(efgh)", "root 4.txt(efgh)"]
