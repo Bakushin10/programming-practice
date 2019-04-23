@@ -4,7 +4,7 @@ def bin(nums):
     for n in range(totalSize):
         l = []
         while n:
-            l.append(n & 1)
+            l.append(n & 1) # bit by bit and
             n >>= 1 # shift the bit by 1 to the right
         ans = getConbination(l,nums)
         print(ans)

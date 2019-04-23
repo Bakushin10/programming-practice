@@ -1,5 +1,5 @@
 """
-https://www.algoexpert.io/questions/River%20Sizes 
+    https://www.algoexpert.io/questions/River%20Sizes 
 
 naive way of sovling question. Big O is too slow
 """
