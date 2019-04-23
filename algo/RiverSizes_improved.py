@@ -25,7 +25,7 @@ def traverseNode(y, x, matrix, visited, sizes):
             continue 
         visited[y][x] = True
 
-        # if the node is 0, we skip it
+        # if the node is 0, then skip it
         if matrix[y][x] == 0:
             continue
         currentRiverSize += 1
@@ -53,7 +53,7 @@ def getUnvisitedNeighbors(y, x, matrix, visited):
 matrix = [
     [1,0,0,1,0],
     [1,0,1,0,0],
-    [0,0,1,0,1,1],
+    [0,0,1,0,1],
     [1,0,1,0,1],
     [1,1,1,1,0],
 ]
