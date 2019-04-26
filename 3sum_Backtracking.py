@@ -7,13 +7,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-        sol = []
-        ans = []
-        return self.threeSumhelper(nums, sol, ans)
-       
+        ans = self.threeSumhelper(nums, [], [])
+        return list(set(tuple(i) for i in ans))
+        
     def threeSumhelper(self, numbers, partial = [], ans = []):
         if len(partial) == 3 and sum(partial) == 0:
-            return ans.append(partial)
+            return ans.append(sorted(partial))
         elif len(partial) >= 3:
             return
 
@@ -22,10 +21,10 @@ class Solution(object):
             remaining = numbers[i+1:]
             ans = self.threeSumhelper(remaining, partial + [n])
         return ans
-    
 
 
-nums = [-1, 0, 1, 2, -1, -4]
+
+nums = [0]
 s = Solution()
 #s.subset_sum(nums,[])
-s.threeSumhelper(nums,[])
+print(s.threeSum(nums))
