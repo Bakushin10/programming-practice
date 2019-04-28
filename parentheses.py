@@ -48,9 +48,10 @@ class Solution(object):
             i += 1
             print(str(i) + "-" + str(current))
             longest = max(longest, i - current)
+        return longest
         print("longest " + str(longest))
 
 l = ")()())"
-l = "())()()"
+l = "()(())"
 s = Solution()
 s.longestValidParentheses(l)     
