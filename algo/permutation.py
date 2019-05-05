@@ -12,7 +12,7 @@ def getPermutationsHelper(array, currentPermutation, permutations):
     else:
         for i in range(len(array)):
             newArray = array[:i] + array[i+1:]
-            newPermutation = currentPermutation + [array[i]
+            newPermutation = currentPermutation + [array[i]]
             getPermutationsHelper(newArray, newPermutation, permutations)
 
 a = [1,2,3,4]
