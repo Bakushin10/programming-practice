@@ -22,6 +22,9 @@ def waterArea(heights):
             curretMax = max(curretMax, reversedHights[i-1])
             right[len(heights)-1-i] = curretMax
 
+    """
+    build the array of highest wall from the left side
+    """
     ans = []
     for i, num in enumerate(heights):
         m = min(left[i], right[i])
