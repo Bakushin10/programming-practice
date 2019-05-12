@@ -1,3 +1,7 @@
+
+"""
+https://www.algoexpert.io/questions/Single%20Cycle%20Check
+"""
 def hasSingleCycle(array):
     # Write your code here.
     count = [0 for i in range(len(array))]
