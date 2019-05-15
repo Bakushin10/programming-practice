@@ -1,26 +1,29 @@
 """
 https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/
 """
-class Solution(object):
-    def canThreePartsEqualSum(self, A):
-        """
-        :type A: List[int]
-        :rtype: bool
-        """
-        left = 0
-        right = len(A)
-        while left < right:
-            print(str(A[:left]) + " :" + str(sum(A[:left])))
-            print(str(A[left:right]) + " :" + str(sum(A[left:right])))
-            print(str(A[right:]) + " :" + str(sum(A[right:])))
-            print("")
-            if sum(A[:left]) == sum(A[left:right]) == sum(A[right:]):
-                return True
-            if sum(A[:left]) == sum(A[right:]):
-                left += 1
-                right -= 1
-            elif sum(A[:left]) > sum(A[right:]):
-                right -= 1
-            elif sum(A[:left]) < sum(A[right:]):
-                left += 1
-        return False
+def canThreePartsEqualsSum(A):
+    target = sum(A)/3
+    right, left = len(A)-1, 0
+
+    while left < right:
+        if sum(A[:left]) == target:
+            break
+        left += 1
+    
+    while left < right:
+        if sum(A[right:]) == target:
+            break
+        right -= 1
+    
+    print("---")
+    print(left)
+    print(right)
+    print("L :" + str(sum(A[:left])))
+    print("R :" + str(sum(A[right:])))
+    print("M :" + str(sum(A[left:right])))
+    return A[:left] == A[left:right] == A[right:]
+
+
+inp = [0,2,1,-6,6,-7,9,1,2,0,1]
+
+canThreePartsEqualsSum(inp)
