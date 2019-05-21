@@ -44,11 +44,6 @@ class Solution(object):
         #     route.append(stack.pop())
         # return route[::-1]
 
-
-
-
-    
-
 #tickets = [["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]]
 tickets = [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
 s = Solution()
