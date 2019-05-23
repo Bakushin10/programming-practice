@@ -9,9 +9,7 @@ def maxAreaOfIsland(grid):
     maxIsland = 0
     for i in range(col):
         for j in range(row):
-            print(str(i), str(j))
             maxIsland = max(maxIsland, findMaxIsland(i, j, grid, visited))
-            print(maxIsland)
     return maxIsland
 
 def findMaxIsland(col, row, grid, visited):

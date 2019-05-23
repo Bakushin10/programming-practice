@@ -34,3 +34,30 @@ def backtrackAncestralTree(lowerDecendant, higherDesendant, diff):
          lowerDecendant = lowerDecendant.ancestor
          higherDesendant = higherDesendant.ancestor
     return lowerDecendant
+
+
+def getYoungestCommonAncestor2(topAncestor, desendantOne, desendantTwo):
+    depthOfDesendantOne = getDepth(desendantOne)
+    depthOfDesendantTwo = getDepth(desendantTwo)
+    
+    if depthOfDesendantOne > depthOfDesendantTwo:
+        levelUp(desendantOne, depthOfDesendantOne - depthOfDesendantTwo)
+    else:
+        levelUp(desendantTwo, depthOfDesendantTwo - depthOfDesendantOne)
+    
+    while desendantOne.ancenstor != desendantTwo.ancenstor:
+        desendantOne = desendantOne.ancestor
+        desendantTwo = desendantTwo.ancestor
+    return desendantOne
+
+def getDepth(desendance):
+    count = 0
+    while desendance.ancestor != NULL:
+        desendance = desendance.ancenstor
+        count += 1
+    return count
+
+def levelUp(node, level):
+    for i in range(level):
+        node = node.ancestor
+    return node
