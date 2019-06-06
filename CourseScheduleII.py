@@ -50,7 +50,7 @@ class Solution(object):
             courses[courseTotake].append(prere)
         
         # find the starting nodes. 
-        Q = [node for node in range(numCourses) if len(courses[n]) == 0]
+        Q = [node for node in range(numCourses) if len(courses[node]) == 0]
         
         courseOrder = []
         while Q:
@@ -64,7 +64,6 @@ class Solution(object):
                         Q.append(i)
         return courseOrder if len(courseOrder) == numCourses else []
 
-
 #2, [[1,0]]  4 [[1,0],[2,0],[3,1],[3,2]]
 c = 4
 l = [[1,0],[2,0],[3,1],[3,2]]
@@ -77,3 +76,7 @@ l = [[1,0],[2,0],[3,1],[3,2]]
 
 s = Solution()
 print(s.findOrder2(c,l))
+
+head = LinkedList(0).addMany([1,2,3,4,5,6,7,8,9])
+k = 6
+print(remvoeKthNode(head,k))
