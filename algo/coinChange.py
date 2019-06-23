@@ -1,6 +1,17 @@
 """
 https://www.algoexpert.io/questions/Min%20Number%20Of%20Coins%20For%20Change
 """
+
+def numberOfWaysToMakeChange2(n, denoms):
+	ways = [0 for i in range(n+1)]
+    ways[0] = 1
+    for demon in denoms:
+        for i in range(1, len(ways)):
+            if i - demon >= 0:
+                ways[i] += ways[i - demon]
+    return ways[n]
+
+
 def numberOfWaysToMakeChange(n, denoms):
     # Write your code here.
     arr = [[0 for i in range(n + 1)] for i in range(len(denoms))]
