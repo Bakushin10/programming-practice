@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/concatenated-words/
+https://leetcode.com/problems/concatenated-words/ 
 """
 class Solution(object):
     def findAllConcatenatedWordsInADict(self, words):

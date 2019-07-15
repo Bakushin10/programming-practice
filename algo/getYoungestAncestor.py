@@ -36,6 +36,7 @@ def backtrackAncestralTree(lowerDecendant, higherDesendant, diff):
     return lowerDecendant
 
 
+
 def getYoungestCommonAncestor2(topAncestor, desendantOne, desendantTwo):
     depthOfDesendantOne = getDepth(desendantOne)
     depthOfDesendantTwo = getDepth(desendantTwo)
