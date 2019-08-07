@@ -40,7 +40,7 @@ def get_itinerary(flights, current):
 flights = [["HNL", "AKL"], ["YUL", "ORD"], ["ORD", "SFO"], ["SFO", "HNL"]]
 current = ["YUL"]
 print(get_itinerary(flights, current))
-
+ 
 
 # def subset_sum(numbers, target, partial=[]):
 #     s = sum(partial)
