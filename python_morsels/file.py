@@ -39,6 +39,7 @@ from argparse import ArgumentParser
 import csv
 
 """
+ regualr value in add_argument is mandatory 
  "--" indicates that this is an optional variable
 """
 
@@ -63,4 +64,4 @@ with open(args.old_filename, newline='') as old_file:
 
 with open(args.new_filename, mode='wt', newline='') as new_file:
     writer = csv.writer(new_file)
-    writer.writerows(rows)
+    writer.writerows(rows)  
