@@ -6,7 +6,7 @@ class Prime():
             if self.isPrime(i):
                 yield i
             i += 1
-
+            
     def isPrime(self, num):
         if num > 1:
             for i in range(2,num):
@@ -15,19 +15,10 @@ class Prime():
             return True
 
 p = Prime()
-nextprime = p.getNextPrime() 
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
-print(next(nextprime))
+nextprime = p.getNextPrime()
+
+print(nextprime)
+# for i in range(100):
+#     print(next(nextprime))
+
+
