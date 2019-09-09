@@ -22,6 +22,7 @@ class Solution(object):
             maxLen = max(maxLen, v)
         return maxLen
 
+
 s = Solution()
 nums = "aub"
 print(s.moveZeroes(nums))
