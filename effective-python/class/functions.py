@@ -36,7 +36,7 @@ logging.basicConfig(filename="example.log", level=logging.INFO)
 def logger(func):
     def log_func(*args):
         logging.info("Running {} with arguments {}".format(func.__name__, args))
-        print(func(*args))
+        print("{} {}".format("func(*args)",func(*args)))
     return log_func
 
 def add(x, y):
@@ -44,12 +44,6 @@ def add(x, y):
 
 def sub(x, y):
     return x - y
-
-add_logger = logger(add)
-sub_logger = logger(sub)
-
-add_logger(3,3)
-sub_logger(20,3)
 
 
 class CountMissing(object):
@@ -72,16 +66,23 @@ class BetterCountMissing(object):
         return 0
 
 
-counter = BetterCountMissing()
-counter()
-assert callable(counter)
-print(counter.getAdded())
+add_logger = logger(add)
+sub_logger = logger(sub)
 
-# Example 9
-counter = BetterCountMissing()
-result = defaultdict(counter, current)  # Relies on __call__
-print(result["d"])
-for key, amount in increments:
-    result[key] += amount
-assert counter.added == 2
-print(result)
+add_logger(3,3)
+sub_logger(20,3)
+print("logger")
+
+# counter = BetterCountMissing()
+# counter()
+# assert callable(counter)
+# print(counter.getAdded())
+
+# # Example 9
+# counter = BetterCountMissing()
+# result = defaultdict(counter, current)  # Relies on __call__
+# print(result["d"])
+# for key, amount in increments:
+#     result[key] += amount
+# assert counter.added == 2
+# print(result)
