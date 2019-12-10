@@ -16,7 +16,7 @@ class Solution:
                  '8': ['t', 'u', 'v'],
                  '9': ['w', 'x', 'y', 'z']}
         
-        def backtrack(combination, next_digits):
+        def (combination, next_digits):
             if len(next_digits) == 0:
                 output.append(combination)
             else:
