@@ -32,7 +32,9 @@ def download_image(img_url):
 
 
 with concurrent.futures.ThreadPoolExecutor() as executor:
+    # map takes map(function, argument) 
     executor.map(download_image, img_urls)
+
 
 
 # def do_something(seconds):
